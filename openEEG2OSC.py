@@ -17,6 +17,7 @@ from pythonosc import udp_client
 #constants maybe loaded from yaml config in the future
 TD_IP = "192.168.0.104"
 TD_PORT = 36663
+EEG_SERIAL_HEADER = "ttyEEGSMT"
 NUM_CHAN = 2 #per EEG
 
 #Global
@@ -46,7 +47,7 @@ def init_eegs() -> List :
     # the rest of the program depends on fixed alphanumeric 
     # ordering in the serdevs list
     p = Path("/dev/")
-    serdevs = list(p.glob("ttyEEGSMT*"))
+    serdevs = list(p.glob(f"{EEG_SERIAL_HEADER}*")) #TODO untested change from hardcoded string
 
     eegs = []
     for i in range(len(serdevs)):
