@@ -1,0 +1,5 @@
+numpy==2.0.0
+pyserial==3.5
+python-osc==1.8.3
+pyudev==0.24.3
+PyYAML==6.0.1

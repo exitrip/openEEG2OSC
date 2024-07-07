@@ -1,0 +1,11 @@
+[Unit]
+Description=pump EEG data out to OSC
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/gamma/openEEG2OSC/openEEG2OSC.py
+
+[Install]
+WantedBy=multi-user.target

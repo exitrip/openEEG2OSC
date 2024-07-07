@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001",SYMLINK+="tty%E{ID_USB_SERIAL_SHORT}"
+#KERNEL=="ttyUSB[0-9]*",MODE="0666"

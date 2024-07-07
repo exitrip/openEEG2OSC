@@ -124,6 +124,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.openEEG2OSC
 env/
 venv/
 ENV/
